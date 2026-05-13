@@ -1,9 +1,16 @@
-body {
+* {
     font-family: Arial, Helvetica, sans-serif;
-    margin-top: 50px;
     background-color: #FE8E82;
 }
 
+body{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* categories.html */
 .categoryContainer {
     display: flex;
     flex-direction: column;
@@ -53,4 +60,82 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px 180px;
+}
+
+/* obtiznost.html */
+.menu{
+    width: 700px;
+    height: 500px;
+
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.title-box{
+    background-color: #d9d9d9;
+
+    padding: 15px 80px;
+
+    border-radius: 15px;
+
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.difficulty-buttons{
+    width: 100%;
+
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.difficulty-btn{
+    border: none;
+
+    background-color: #d9d9d9;
+
+    padding: 15px 35px;
+
+    border-radius: 15px;
+
+    font-size: 25px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.difficulty-btn:hover{
+    transform: scale(1.05);
+}
+
+.active{
+    background-color: #9f9f9f;
+}
+
+.play-btn{
+    border: none;
+
+    background-color: #d9d9d9;
+
+    padding: 20px 100px;
+
+    border-radius: 15px;
+
+    font-size: 35px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.play-btn:hover{
+    transform: scale(1.05);
 }

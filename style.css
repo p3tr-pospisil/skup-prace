@@ -12,6 +12,43 @@ body{
 }
 
 /* index.html */
+@media screen and (max-width: 900px) {
+
+    .Welcome {
+        width: 85%;           
+        aspect-ratio: 785 / 348; 
+        font-size: 4.5vw; 
+        padding: 2vw;
+    }
+
+    .Settings, .Stats {
+        width: 65%;
+        aspect-ratio: 584 / 174; 
+        font-size: 3.5vw;
+        padding: 2vw;
+    }
+    
+    .categoryContainer {
+        width: 100%;
+        padding: 0 5%;
+    }
+
+    .categoryBigBox {
+        width: 90%;
+        aspect-ratio: 800 / 250;
+        font-size: 8vw; 
+        padding: 2vw;
+        margin-bottom: 3vw;
+    }
+
+    .categoryBox {
+        width: 100%; 
+        aspect-ratio: 300 / 150;
+        font-size: 5vw;
+        padding: 1vw;
+    }
+}
+
 .MainContainer {
     display: flex;
     flex-direction: column;

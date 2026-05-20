@@ -21,10 +21,13 @@ body{
 }
 
 .menuItem {
+    display: block;
     background-color: #b886ff;
     padding: 10px 20px;
     text-align: center;
     border-radius: 4px;
+    text-decoration: none;
+    color: black;
 }
 
 /* index.html */

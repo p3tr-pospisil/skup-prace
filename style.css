@@ -21,10 +21,13 @@ body{
 }
 
 .menuItem {
+    display: block;
     background-color: #b886ff;
     padding: 10px 20px;
     text-align: center;
     border-radius: 4px;
+    text-decoration: none;
+    color: black;
 }
 
 /* index.html */
@@ -46,7 +49,7 @@ body{
 .sidebar{
     width: 238px;
     height: 459px;
-    background-color: #edf0ea;
+    background-color: white;
     position: absolute;
     left: 15px;
     top: 50%;
@@ -62,7 +65,7 @@ body{
 .side-button{
     width: 220px;
     height: 86px;
-    background-color: #c693ff;
+    background-color: #b886ff;
     border: none;
     font-size: 22px;
     cursor: pointer;

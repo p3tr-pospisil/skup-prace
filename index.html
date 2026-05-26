@@ -2,37 +2,24 @@
 <html lang="cs">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kvízová aplikace</title>
-
+    <title>Menu</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="sidebar">
+    <nav class="sideMenu">
+        <a class="menuItem" href="#">Domů</a>
+        <a class="menuItem" href="quiz.html">Začít kvíz</a>
+        <a class="menuItem" href="categories.html">Kategorie</a>
+    </nav>
 
-        <button class="side-button">DOMŮ</button>
-
-        <button class="side-button">ZAČÍT KVÍZ</button>
-
-        <button class="side-button">KATEGORIE</button>
-
-    </div>
-
-    <div class="main-content">
-
-        <div class="welcome-box">
-            VÍTEJ V KVÍZOVÉ APLIKACI
+    <main class="mainContent">
+        <div class="welcomeBox">
+            <h1>VÍTEJ V KVÍZOVÉ APLIKACI</h1>
         </div>
-
-        <button class="main-button">
-            Nastavení hry
-        </button>
-
-        <button class="main-button">
-            Statistiky
-        </button>
-
-    </div>
+        <a href="categories.html" class="bigButton">Nastavení hry</a>
+        <a href="" class="bigButton">Statistiky</a>
+    </main>
 
 </body>
 </html>

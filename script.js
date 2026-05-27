@@ -54,37 +54,56 @@ class Quiz {
 // TODO: Propojení s HTML
 // hint: question, answer, quizContainter
 
+const questionEl = document.querySelector(".question");
+const answerEls = document.querySelectorAll(".answer");
+const quizContainer = document.querySelector(".quizContainer");
+
+
 // TODO: napsat funkci pro vykreslení otázky a kontrolu konce
 function printQuestion(quiz){
-  // Kontrola jestli jsme nakonci a vypsání Konec Kvízu! + score
-  // Vem aktualní otázku a přepiš text otázky v html
 
-  // Přepiš text odpovědí 
-  array.forEach(element, index => {
-    
+  // KONEC KVÍZU
+  if (!quiz.isQuizActive()) {
+    questionEl.textContent = `Konec kvízu! Score: ${quiz.score}`;
+    answerEls.forEach(el => {
+      el.style.display = "none";
+    });
+    return;
+  }
+
+  // AKTUÁLNÍ OTÁZKA
+  const question = quiz.getCurrentQuestion();
+
+  questionEl.textContent = question.text;
+
+  // ODPOVĚDI
+  answerEls.forEach((element, index) => {
+    element.textContent = question.answers[index];
+    element.dataset.index = index;
   });
 }
 
 function handleClick(event, quiz){
-  const vybranyIndex = parseInt(udalost.target.dataset.index);
+  const vybranyIndex = parseInt(event.target.dataset.index);
 
   quiz.saveAnswer(vybranyIndex);
-  
+
   printQuestion(quiz);
 }
 
 // Kód se musí spustit pouze pokud jsme na quiz.html
-if (/* existuje kvízová otázka a odpovědi */){
+if (document.querySelector(".quizContainer")) {
 
-  // TODO
   // Vytvoř nový kvíz
-  // Posluchače pro každou odpověď
-  // hint: 
-  // NazevOdpovedi.forEach(element => {
-  // element.PridatPosluchače('click', (event) => {
-  //    handleClick(event, newQuiz)
-  //    });
-  // });
-  // Vykresli otázku
+  const quiz = new Quiz(questionsData);
 
+  // Posluchače pro každou odpověď
+  answerEls.forEach((element) => {
+    element.addEventListener("click", (event) => {
+      handleClick(event, quiz);
+    });
+  });
+
+  // Vykresli první otázku
+  printQuestion(quiz);
 }

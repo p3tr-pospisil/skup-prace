@@ -1,7 +1,5 @@
 "use strict";
-// TODO: Logika projektu
-// reference na tlačítka apod
-// class Quiz (atributy metody)
+// TODO: Vzhled (Otázky jsou dlouhé), Obtížnost, Doplnit data, refator, chore
 
 // Promíchání pole
 function shuffle(array) {
@@ -31,7 +29,7 @@ const questionsData = {
 class Quiz {
     constructor(questions) {
         this.questions = questions;
-        this.currentQuestion = 0;}
+        this.currentQuestion = 0;
         this.score = 0;
     }
 

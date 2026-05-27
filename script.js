@@ -17,39 +17,21 @@ function shuffle(array) {
 }
 
 // Data pro naše kvízy
-const questionsData = [
-  { 
-    text: "Jak je těžký tank?", 
-    answers: ["10 tun", "60 tun", "200 tun", "5 tun"], 
-    rightAnswer: 1
-  },
-  {
-    text: "Kolik bitů tvoří jeden bajt?", 
-    answers: ["4 bity", "8 bitů", "16 bitů", "32 bitů"], 
-    rightAnswer: 1
-  },
-  { 
-    text: "Který protokol se standardně používá pro bezpečné prohlížení webových stránek?", 
-    answers: ["HTTP", "FTP", "HTTPS", "SMTP"], 
-    rightAnswer: 2
-  },
-  { 
-    text: "V jaké číselné soustavě pracují digitální počítače na nejnižší úrovni?", 
-    answers: ["Binární (dvojkové)", "Šestnáctkové", "Desítkové", "Osmičkové"], 
-    rightAnswer: 0
-  },
-  {
-    text: "Který z následujících pojmů označuje škodlivý software?", 
-    answers: ["Shareware", "Firmware", "Freeware", "Malware"], 
-    rightAnswer: 3
-  }
-]
+const questionsData = {
+  easy: [
+    { text: "Jak je těžký tank?", answers: ["10 tun", "60 tun", "200 tun", "5 tun"], rightAnswer: 1 },
+    { text: "Kolik bitů tvoří jeden bajt?", answers: ["4 bity", "8 bitů", "16 bitů", "32 bitů"], rightAnswer: 1 },
+    { text: "Který protokol se standardně používá pro bezpečné prohlížení webových stránek?", answers: ["HTTP", "FTP", "HTTPS", "SMTP"], rightAnswer: 2 },
+    { text: "V jaké číselné soustavě pracují digitální počítače na nejnižší úrovni?", answers: ["Binární (dvojkové)", "Šestnáctkové", "Desítkové", "Osmičkové"], rightAnswer: 0 },
+    { text: "Který z následujících pojmů označuje škodlivý software?", answers: ["Shareware", "Firmware", "Freeware", "Malware"], rightAnswer: 3 }
+  ]
+};
 
 // Naše hlavní třída pro kvíz
 class Quiz {
     constructor(questions) {
         this.questions = questions;
-        this.currentQuestion = 0;
+        this.currentQuestion = 0;}
         this.score = 0;
     }
 

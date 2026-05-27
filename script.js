@@ -21,27 +21,27 @@ const questionsData = [
   { 
     text: "Jak je těžký tank?", 
     answers: ["10 tun", "60 tun", "200 tun", "5 tun"], 
-    rightAnswer: 1 
+    rightAnswer: 1
   },
   {
     text: "Kolik bitů tvoří jeden bajt?", 
     answers: ["4 bity", "8 bitů", "16 bitů", "32 bitů"], 
-    rightAnswer: 2 
-  }
+    rightAnswer: 2
+  },
   { 
     text: "Který protokol se standardně používá pro bezpečné prohlížení webových stránek?", 
     answers: ["HTTP", "FTP", "HTTPS", "SMTP"], 
-    rightAnswer: 3 
+    rightAnswer: 3
   },
   { 
     text: "V jaké číselné soustavě pracují digitální počítače na nejnižší úrovni?", 
     answers: ["Binární (dvojkové)", "Šestnáctkové", "Desítkové", "Osmičkové"], 
-    rightAnswer: 1 // index
+    rightAnswer: 1
   },
   {
     text: "Který z následujících pojmů označuje škodlivý software?", 
     answers: ["Shareware", "Firmware", "Freeware", "Malware"], 
-    rightAnswer: 4 // index  
+    rightAnswer: 4
   }
 ]
 
@@ -57,12 +57,12 @@ class Quiz {
     getCurrentQuestion() {
         return this.questions[this.currentQuestion];
     }
+
     // Uloží odpověď a posune kvíz dál
     saveAnswer(currentIndex) {
       const currentQuestionData = this.getCurrentQuestion();
 
       // porovnání odpovědí a případný inkrement skore
-
       if (currentIndex === currentQuestionData.rightAnswer) {
             this.score++;
         }

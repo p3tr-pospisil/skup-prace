@@ -26,22 +26,22 @@ const questionsData = [
   {
     text: "Kolik bitů tvoří jeden bajt?", 
     answers: ["4 bity", "8 bitů", "16 bitů", "32 bitů"], 
-    rightAnswer: 2
+    rightAnswer: 1
   },
   { 
     text: "Který protokol se standardně používá pro bezpečné prohlížení webových stránek?", 
     answers: ["HTTP", "FTP", "HTTPS", "SMTP"], 
-    rightAnswer: 3
+    rightAnswer: 2
   },
   { 
     text: "V jaké číselné soustavě pracují digitální počítače na nejnižší úrovni?", 
     answers: ["Binární (dvojkové)", "Šestnáctkové", "Desítkové", "Osmičkové"], 
-    rightAnswer: 1
+    rightAnswer: 0
   },
   {
     text: "Který z následujících pojmů označuje škodlivý software?", 
     answers: ["Shareware", "Firmware", "Freeware", "Malware"], 
-    rightAnswer: 4
+    rightAnswer: 3
   }
 ]
 
@@ -64,10 +64,10 @@ class Quiz {
 
       // porovnání odpovědí a případný inkrement skore
       if (currentIndex === currentQuestionData.rightAnswer) {
-            this.score++;
-        }
+        this.score++;
+      }
 
-        this.currentQuestion++;
+      this.currentQuestion++;
     }
 
     // Zjistí jestli jsme na konci kvízu

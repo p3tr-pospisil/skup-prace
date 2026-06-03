@@ -162,6 +162,7 @@ body{
 /* obtiznost.html */
 .menu{
     width: 700px;
+    max-width: 100%;
     height: 500px;
 
     border-radius: 10px;
@@ -188,7 +189,8 @@ body{
     width: 100%;
 
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 20px;
 }
 
 .difficulty-btn{
@@ -235,6 +237,32 @@ body{
 
 .play-btn:hover{
     transform: scale(1.05);
+}
+
+@media (max-width: 700px){
+
+    .menu{
+        width: 100%;
+    }
+
+    .title-box{
+        padding: 12px 40px;
+        font-size: 24px;
+    }
+
+    .difficulty-buttons{
+        gap: 10px;
+    }
+
+    .difficulty-btn{
+        padding: 12px 20px;
+        font-size: 18px;
+    }
+
+    .play-btn{
+        padding: 16px 60px;
+        font-size: 28px;
+    }
 }
 
 /* quiz.html */

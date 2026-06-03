@@ -19,9 +19,32 @@ function shuffle(array) {
 // Databáze pro naše kvízy
 // TODO: Naplnit naši 'databázi' využítím třídy Question
 // hint: Mělo by to být jedno velké pole plné new Question('obtiznost', 'Text otázky', [pole s odpověďmi], číslo indexu správné odpovědi)
+<<<<<<< HEAD
 
 
 
+=======
+const questionsData = [
+    new Question('easy', "Jak je těžký tank?", ["10 tun", "60 tun", "200 tun", "5 tun"], 1),
+    new Question('easy', "Kolik bitů tvoří jeden bajt?", ["4 bity", "8 bitů", "16 bitů", "32 bitů"], 1),
+    new Question('easy', "Který protokol se standardně používá pro bezpečné prohlížení webových stránek?", ["HTTP", "FTP", "HTTPS", "SMTP"], 2),
+    new Question('easy', "V jaké číselné soustavě pracují digitální počítače na nejnižší úrovni?", ["Binární (dvojkové)", "Šestnáctkové", "Desítkové", "Osmičkové"], 0),
+    new Question('easy', "Který z následujících pojmů označuje škodlivý software?", ["Shareware", "Firmware", "Freeware", "Malware"], 3),
+    new Question('medium', "Která komponenta počítače slouží jako superrychlá, ale dočasná paměť pro běžící aplikace?", ["SSD disk", "Pevný disk (HDD)", "Operační paměť (RAM)", "Flash disk"], 2),
+
+    new Question('medium', "Jak se jmenuje operační systém s otevřeným zdrojovým kódem (open-source), jehož symbolem je tučňák Tux?", ["Windows", "macOS", "Linux", "Android"], 2),
+    new Question('medium', "Co dělá v počítači grafická karta (GPU)?", ["Počítá zvukové efekty", "Zpracovává obrazová data a posílá je do monitoru", "Ukládá soubory uživatele", "Zajišťuje internetové připojení"], 1),
+    new Question('medium', "Která legendární hra z roku 1993 zpopularizovala žánr stříleček z pohledu první osoby (FPS)?", ["Doom", "Minecraft", "Counter-Strike", "Pac-Man"], 0),
+    new Question('medium', "Která zkratka označuje moderní, velmi rychlé úložiště bez pohyblivých částí?", ["HDD", "SSD", "DVD", "RAM"], 1),
+
+    new Question('hard', "V kterém roce byl veřejnosti představen první iPhone, který odstartoval éru moderních smartphonů?", ["2005", "2007", "2009", "2010"], 1),
+    new Question('hard', "Jak se jmenuje první programovatelný elektronický počítač na světě, dokončený v USA během 2. světové války?", ["ENIAC", "IBM PC", "Commodore 64", "Amiga"], 0),
+    new Question('hard', "Co znamená zkratka IP v kontextu počítačové sítě (např. IP adresa)?", ["Internal Protocol", "Internet Protocol", "Information Path", "Instant Process"], 1),
+    new Question('hard', "Který programovací jazyk, vytvořený v 90. letech Guidem van Rossumem, má ve svém znaku dva hady?", ["Java", "C++", "Python", "Ruby"], 2),
+    new Question('hard', "Jak se říká útoku, při kterém se útočník snaží zahltit server obrovským množstvím požadavků z mnoha různých počítačů, aby ho shodil?", ["Phishing", "DDoS", "Spyware", "Ransomware"], 1)
+]
+
+>>>>>>> 89b41eeda6545f9a0bf8d82dfdcadb0e46e13f29
 class Question {
     constructor(difficulty, questionText, answers, rightAnswer) {
         this.difficulty = difficulty;
@@ -31,6 +54,7 @@ class Question {
     }
 }
 
+<<<<<<< HEAD
 const questionsData = [
     new Question('easy', "Jak je těžký tank?", ["10 tun", "60 tun", "200 tun", "5 tun"], 1),
     new Question('easy', "Kolik bitů tvoří jeden bajt?", ["4 bity", "8 bitů", "16 bitů", "32 bitů"], 1),
@@ -52,6 +76,8 @@ const questionsData = [
 ]
 
 
+=======
+>>>>>>> 89b41eeda6545f9a0bf8d82dfdcadb0e46e13f29
 class Quiz {
     constructor(questions) {
         this.questions = questions;
@@ -85,8 +111,12 @@ class Quiz {
 const questionEl = document.querySelector(".question");
 const answerEls = document.querySelectorAll(".answer");
 const quizContainer = document.querySelector(".quizContainer");
+<<<<<<< HEAD
 // TODO: Přidat propojení s obztížnostmi
 
+=======
+const difficultyBtns = document.querySelectorAll(".difficulty-btn");
+>>>>>>> 89b41eeda6545f9a0bf8d82dfdcadb0e46e13f29
 
 
 // Vykreslení otázky a kontrola konce
@@ -155,11 +185,11 @@ if (quizContainer) { // <-- vylepšení podmínky
   // Vykresli první otázku
   printQuestion(quiz);
 }
+
 // Kód pro obtiznost.html
+// TODO: Doplnit logiku
+// hint: Zkusme využít to co už máme o pár řádků výše u té podmínky
 if (difficultyBtns.length > 0) {
-
-  const difficultyBtns = document.querySelectorAll(".difficulty-btn");
-
   difficultyBtns.forEach((button) => {
     const difficultyBtns = document.querySelectorAll(".difficulty-btn");
 
@@ -169,6 +199,7 @@ if (difficultyBtns.length > 0) {
 
       window.location.href = "quiz.html";
     });
+<<<<<<< HEAD
   });
 
 }
@@ -182,4 +213,6 @@ if (false) {
   // použijte .trim() metodu pro event.target.textContent 
   // přidání posluchačů bude stejné jako u answerEls,
   // pro přesměrování na další stránku využíte window.location.href = "quiz.html"
+=======
+>>>>>>> 89b41eeda6545f9a0bf8d82dfdcadb0e46e13f29
 }

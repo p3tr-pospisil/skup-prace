@@ -27,13 +27,25 @@ const questionsData = {
   ]
 };
 
-// TODO: Naše nová třída pro otázky
 class Question {
-  constructor(difficulty, questionText, answers, rightAnswer){
-    // TODO: propojit argumenty konstruktoru na reálné atributy jako u třídy Quiz
-  }
+    constructor(difficulty, questionText, answers, rightAnswer) {
+        this.difficulty = difficulty;
+        this.questionText = questionText;
+        this.answers = answers;
+        this.rightAnswer = rightAnswer;
+    }
 }
 
+const questions = questionsData.easy.map(q => {
+    return new Question(
+        'easy',          // obtížnost
+        q.text,          // text otázky
+        q.answers,       // pole odpovědí
+        q.rightAnswer    // index správné odpovědi
+    );
+});
+
+console.log(questions);
 // Naše hlavní třída pro kvíz
 class Quiz {
     constructor(questions) {

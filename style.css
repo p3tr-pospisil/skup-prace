@@ -8,6 +8,7 @@ body{
     margin-top: 50px;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 /* Menu */
@@ -31,17 +32,6 @@ body{
 }
 
 /* index.html */
-body {
-    margin: 0;
-    padding: 0;
-    background-color:#FE8E82;
-    display: flex;
-    align-items: center;
-    min-height: 100vh;
-    gap: 55px;
-    padding-left: 20px;
-}
-
 .mainContent {
     display: flex;
     flex-direction: column;
@@ -71,7 +61,7 @@ body {
     width: 584px;
     height: 174px;
     background-color: #D9D9D9;
-    border-radius: 12px;
+    border-radius: 33px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -128,7 +118,8 @@ body {
 
 /* obtiznost.html */
 .menu{
-    width: 700px;
+    width: 800px;
+    max-width: 100%;
     height: 500px;
 
     border-radius: 10px;
@@ -143,19 +134,23 @@ body {
 .title-box{
     background-color: #d9d9d9;
 
-    padding: 15px 80px;
+    padding: 40px 80px;
 
-    border-radius: 15px;
+    border-radius: 33px;
 
-    font-size: 30px;
+    font-size: 60px;
     font-weight: bold;
 }
 
 .difficulty-buttons{
     width: 100%;
 
+    width: 300px;
+    height: 100px;
+
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 20px;
 }
 
 .difficulty-btn{
@@ -165,9 +160,9 @@ body {
 
     padding: 15px 35px;
 
-    border-radius: 15px;
+    border-radius: 33px;
 
-    font-size: 25px;
+    font-size: 30px;
     font-weight: bold;
 
     cursor: pointer;
@@ -202,6 +197,32 @@ body {
 
 .play-btn:hover{
     transform: scale(1.05);
+}
+
+@media (max-width: 700px){
+
+    .menu{
+        width: 100%;
+    }
+
+    .title-box{
+        padding: 12px 40px;
+        font-size: 24px;
+    }
+
+    .difficulty-buttons{
+        gap: 10px;
+    }
+
+    .difficulty-btn{
+        padding: 12px 20px;
+        font-size: 18px;
+    }
+
+    .play-btn{
+        padding: 16px 60px;
+        font-size: 28px;
+    }
 }
 
 /* quiz.html */

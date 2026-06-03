@@ -21,6 +21,7 @@ function shuffle(array) {
 // hint: Mělo by to být jedno velké pole plné new Question('obtiznost', 'Text otázky', [pole s odpověďmi], číslo indexu správné odpovědi)
 
 
+
 class Question {
     constructor(difficulty, questionText, answers, rightAnswer) {
         this.difficulty = difficulty;
@@ -49,6 +50,7 @@ const questionsData = [
     new Question('hard', "Který programovací jazyk, vytvořený v 90. letech Guidem van Rossumem, má ve svém znaku dva hady?", ["Java", "C++", "Python", "Ruby"], 2),
     new Question('hard', "Jak se říká útoku, při kterém se útočník snaží zahltit server obrovským množstvím požadavků z mnoha různých počítačů, aby ho shodil?", ["Phishing", "DDoS", "Spyware", "Ransomware"], 1)
 ]
+
 
 class Quiz {
     constructor(questions) {
@@ -153,7 +155,23 @@ if (quizContainer) { // <-- vylepšení podmínky
   // Vykresli první otázku
   printQuestion(quiz);
 }
+// Kód pro obtiznost.html
+if (difficultyBtns.length > 0) {
 
+  const difficultyBtns = document.querySelectorAll(".difficulty-btn");
+
+  difficultyBtns.forEach((button) => {
+    const difficultyBtns = document.querySelectorAll(".difficulty-btn");
+
+      const difficulty = event.target.textContent.trim();
+
+      localStorage.setItem("difficulty", difficulty);
+
+      window.location.href = "quiz.html";
+    });
+  });
+
+}
 // Kód pro obtiznost.html
 // TODO: Doplnit logiku
 // hint: Zkusme využít to co už máme o pár řádků výše u té podmínky

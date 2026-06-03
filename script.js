@@ -19,11 +19,11 @@ function shuffle(array) {
 // hint: Mělo by to být jedno velké pole plné new Question('obtiznost', 'Text otázky', [pole s odpověďmi], číslo indexu správné odpovědi)
 const questionsData = {
   easy: [
-    { text: "Jak je těžký tank?", answers: ["10 tun", "60 tun", "200 tun", "5 tun"], rightAnswer: 1 },
-    { text: "Kolik bitů tvoří jeden bajt?", answers: ["4 bity", "8 bitů", "16 bitů", "32 bitů"], rightAnswer: 1 },
-    { text: "Který protokol se standardně používá pro bezpečné prohlížení webových stránek?", answers: ["HTTP", "FTP", "HTTPS", "SMTP"], rightAnswer: 2 },
-    { text: "V jaké číselné soustavě pracují digitální počítače na nejnižší úrovni?", answers: ["Binární (dvojkové)", "Šestnáctkové", "Desítkové", "Osmičkové"], rightAnswer: 0 },
-    { text: "Který z následujících pojmů označuje škodlivý software?", answers: ["Shareware", "Firmware", "Freeware", "Malware"], rightAnswer: 3 }
+    new Question('easy', "Jak je těžký tank?", ["10 tun", "60 tun", "200 tun", "5 tun"], 1),
+    new Question('easy', "Kolik bitů tvoří jeden bajt?", ["4 bity", "8 bitů", "16 bitů", "32 bitů"], 1),
+    new Question('easy', "Který protokol se standardně používá pro bezpečné prohlížení webových stránek?", ["HTTP", "FTP", "HTTPS", "SMTP"], 2),
+    new Question('easy', "V jaké číselné soustavě pracují digitální počítače na nejnižší úrovni?", ["Binární (dvojkové)", "Šestnáctkové", "Desítkové", "Osmičkové"], 0),
+    new Question('easy', "Který z následujících pojmů označuje škodlivý software?", ["Shareware", "Firmware", "Freeware", "Malware"], 3)
   ]
 };
 
@@ -36,17 +36,6 @@ class Question {
     }
 }
 
-const questions = questionsData.easy.map(q => {
-    return new Question(
-        'easy',          // obtížnost
-        q.text,          // text otázky
-        q.answers,       // pole odpovědí
-        q.rightAnswer    // index správné odpovědi
-    );
-});
-
-console.log(questions);
-// Naše hlavní třída pro kvíz
 class Quiz {
     constructor(questions) {
         this.questions = questions;

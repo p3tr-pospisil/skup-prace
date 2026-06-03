@@ -133,7 +133,23 @@ if (document.querySelector(".quizContainer")) { // <-- vylepšení podmínky
   // Vykresli první otázku
   printQuestion(quiz);
 }
+// Kód pro obtiznost.html
+if (difficultyBtns.length > 0) {
 
+  const difficultyBtns = document.querySelectorAll(".difficulty-btn");
+
+  difficultyBtns.forEach((button) => {
+    const difficultyBtns = document.querySelectorAll(".difficulty-btn");
+
+      const difficulty = event.target.textContent.trim();
+
+      localStorage.setItem("difficulty", difficulty);
+
+      window.location.href = "quiz.html";
+    });
+  });
+
+}
 // Kód pro obtiznost.html
 // TODO: Doplnit logiku
 // hint: Zkusme využít to co už máme o pár řádků výše u té podmínky

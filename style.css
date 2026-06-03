@@ -31,79 +31,58 @@ body{
 }
 
 /* index.html */
-.MainContainer {
+body {
+    margin: 0;
+    padding: 0;
+    background-color:#FE8E82;
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    gap: 55px;
+    padding-left: 20px;
+}
+
+.mainContent {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 40px; 
+    gap: 55px;
     width: 100%;
 }
 
-.Welcome, .Settings, .Stats {
-    background-color: #D9D9D9;
-    color: black;
-    display: flex;             
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    border-radius: 40px;       
-    font-weight: bold;
-    text-transform: none;      
-}
-
-.Welcome {
+.welcomeBox {
     width: 785px;
     height: 348px;
-    font-size: 40px;           
+    background-color: #D9D9D9;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.Settings {
+.welcomeBox h1 {
+    margin: 0;
+    font-size: 42px;
+    background-color: #D9D9D9;
+    background: none;
+}
+
+.bigButton {
     width: 584px;
     height: 174px;
-    font-size: 32px;
+    background-color: #D9D9D9;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    font-size: 38px;
+    transition: 0.2s;
 }
 
-.Stats {
-    width: 584px;
-    height: 174px;
-    font-size: 32px;
-}
-
-@media screen and (max-width: 900px) {
-
-    .Welcome {
-        width: 85%;           
-        aspect-ratio: 785 / 348; 
-        font-size: 4.5vw; 
-        padding: 2vw;
-    }
-
-    .Settings, .Stats {
-        width: 65%;
-        aspect-ratio: 584 / 174; 
-        font-size: 3.5vw;
-        padding: 2vw;
-    }
-    
-    .categoryContainer {
-        width: 100%;
-        padding: 0 5%;
-    }
-
-    .categoryBigBox {
-        width: 90%;
-        aspect-ratio: 800 / 250;
-        font-size: 8vw; 
-        padding: 2vw;
-        margin-bottom: 3vw;
-    }
-
-    .categoryBox {
-        width: 100%; 
-        aspect-ratio: 300 / 150;
-        font-size: 5vw;
-        padding: 1vw;
-    }
+.bigButton:hover {
+    transform: scale(1.03);
 }
 
 /* categories.html */
@@ -118,18 +97,12 @@ body{
     background-color: #D9D9D9;
     display: inline-flex;
     border-radius: 33px;
-
-    /* Text */
     font-size: 75px;
     font-weight: 900;
-
-    /* Velikost */
     width: 800px;
     height: 250px;
     padding: 10px;
     margin-bottom: 20px;
-
-    /* Centrování*/
     align-items: center;
     justify-content: center;
 }
@@ -138,17 +111,11 @@ body{
     background-color: #D9D9D9;
     display: inline-flex;
     border-radius: 33px;
-
-    /* Text */
     font-size: 50px;
     font-weight: 900;
-
-    /* Velikost */
     width: 300px;
     height: 150px;
     padding: 10px;
-
-    /* Centrování*/
     align-items: center;
     justify-content: center;
 }

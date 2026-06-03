@@ -1,14 +1,25 @@
 <!DOCTYPE html>
 <html lang="cs">
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
     <link rel="stylesheet" href="style.css">
-    <title>Hlavní stránka</title>
 </head>
 <body>
-    <div class="MainContainer">
-        <div class="Welcome">Vítej v kvízové aplikaci</div>
-        <div class="Settings">Nastavení hry</div>
-        <div class="Stats">Statistiky</div>
-    </div>
+
+    <nav class="sideMenu">
+        <a class="menuItem" href="#">Domů</a>
+        <a class="menuItem" href="quiz.html">Začít kvíz</a>
+        <a class="menuItem" href="categories.html">Kategorie</a>
+    </nav>
+
+    <main class="mainContent">
+        <div class="welcomeBox">
+            <h1>VÍTEJ V KVÍZOVÉ APLIKACI</h1>
+        </div>
+        <a href="categories.html" class="bigButton">Nastavení hry</a>
+        <a href="" class="bigButton">Statistiky</a>
+    </main>
+
 </body>
 </html>

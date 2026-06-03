@@ -24,6 +24,20 @@ const questionsData = {
     new Question('easy', "Který protokol se standardně používá pro bezpečné prohlížení webových stránek?", ["HTTP", "FTP", "HTTPS", "SMTP"], 2),
     new Question('easy', "V jaké číselné soustavě pracují digitální počítače na nejnižší úrovni?", ["Binární (dvojkové)", "Šestnáctkové", "Desítkové", "Osmičkové"], 0),
     new Question('easy', "Který z následujících pojmů označuje škodlivý software?", ["Shareware", "Firmware", "Freeware", "Malware"], 3)
+  ],
+  medium: [
+    new Question('medium', "Která komponenta počítače slouží jako superrychlá, ale dočasná paměť pro běžící aplikace?", ["SSD disk", "Pevný disk (HDD)", "Operační paměť (RAM)", "Flash disk"], 2),
+    new Question('medium', "Jak se jmenuje operační systém s otevřeným zdrojovým kódem (open-source), jehož symbolem je tučňák Tux?", ["Windows", "macOS", "Linux", "Android"], 2),
+    new Question('medium', "Co dělá v počítači grafická karta (GPU)?", ["Počítá zvukové efekty", "Zpracovává obrazová data a posílá je do monitoru", "Ukládá soubory uživatele", "Zajišťuje internetové připojení"], 1),
+    new Question('medium', "Která legendární hra z roku 1993 zpopularizovala žánr stříleček z pohledu první osoby (FPS)?", ["Doom", "Minecraft", "Counter-Strike", "Pac-Man"], 0),
+    new Question('medium', "Která zkratka označuje moderní, velmi rychlé úložiště bez pohyblivých částí?", ["HDD", "SSD", "DVD", "RAM"], 1)
+  ],
+  hard: [
+    new Question('hard', "V kterém roce byl veřejnosti představen první iPhone, který odstartoval éru moderních smartphonů?", ["2005", "2007", "2009", "2010"], 1),
+    new Question('hard', "Jak se jmenuje první programovatelný elektronický počítač na světě, dokončený v USA během 2. světové války?", ["ENIAC", "IBM PC", "Commodore 64", "Amiga"], 0),
+    new Question('hard', "Co znamená zkratka IP v kontextu počítačové sítě (např. IP adresa)?", ["Internal Protocol", "Internet Protocol", "Information Path", "Instant Process"], 1),
+    new Question('hard', "Který programovací jazyk, vytvořený v 90. letech Guidem van Rossumem, má ve svém znaku dva hady?", ["Java", "C++", "Python", "Ruby"], 2),
+    new Question('hard', "Jak se říká útoku, při kterém se útočník snaží zahltit server obrovským množstvím požadavků z mnoha různých počítačů, aby ho shodil?", ["Phishing", "DDoS", "Spyware", "Ransomware"], 1)
   ]
 };
 

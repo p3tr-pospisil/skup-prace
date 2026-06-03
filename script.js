@@ -79,8 +79,7 @@ class Quiz {
 const questionEl = document.querySelector(".question");
 const answerEls = document.querySelectorAll(".answer");
 const quizContainer = document.querySelector(".quizContainer");
-// TODO: Přidat propojení s obztížnostmi
-const difficultyBtns
+const difficultyBtns = document.querySelectorAll(".difficulty-btn");
 
 
 // Vykreslení otázky a kontrola konce
@@ -144,11 +143,11 @@ if (document.querySelector(".quizContainer")) { // <-- vylepšení podmínky
   // Vykresli první otázku
   printQuestion(quiz);
 }
+
 // Kód pro obtiznost.html
+// TODO: Doplnit logiku
+// hint: Zkusme využít to co už máme o pár řádků výše u té podmínky
 if (difficultyBtns.length > 0) {
-
-  const difficultyBtns = document.querySelectorAll(".difficulty-btn");
-
   difficultyBtns.forEach((button) => {
     const difficultyBtns = document.querySelectorAll(".difficulty-btn");
 
@@ -158,17 +157,4 @@ if (difficultyBtns.length > 0) {
 
       window.location.href = "quiz.html";
     });
-  });
-
-}
-// Kód pro obtiznost.html
-// TODO: Doplnit logiku
-// hint: Zkusme využít to co už máme o pár řádků výše u té podmínky
-if (/* Jestli jsme na stránce obtiznost.html */) {
-
-  // TODO: přidat posluchače na tlačítka s obtížnostmi a uložit si jejich hodnotu do localStorage
-  // hint: localStorage.setItem('JmenoItemuCoUkladame', item),
-  // použijte .trim() metodu pro event.target.textContent 
-  // přidání posluchačů bude stejné jako u answerEls,
-  // pro přesměrování na další stránku využíte window.location.href = "quiz.html"
 }

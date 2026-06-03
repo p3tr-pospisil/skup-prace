@@ -1,7 +1,5 @@
 "use strict";
-// TODO: Logika projektu
-// reference na tlačítka apod
-// class Quiz (atributy metody)
+// TODO: Vzhled (Otázky jsou dlouhé), Obtížnost, Doplnit data, refator, chore
 
 // Promíchání pole
 function shuffle(array) {
@@ -16,7 +14,9 @@ function shuffle(array) {
   return array; // Returning the shuffled array
 }
 
-// Data pro naše kvízy
+// Databáze pro naše kvízy
+// TODO: Naplnit naši 'databázi' využítím třídy Question
+// hint: Mělo by to být jedno velké pole plné new Question('obtiznost', 'Text otázky', [pole s odpověďmi], číslo indexu správné odpovědi)
 const questionsData = {
   easy: [
     { text: "Jak je těžký tank?", answers: ["10 tun", "60 tun", "200 tun", "5 tun"], rightAnswer: 1 },
@@ -26,6 +26,13 @@ const questionsData = {
     { text: "Který z následujících pojmů označuje škodlivý software?", answers: ["Shareware", "Firmware", "Freeware", "Malware"], rightAnswer: 3 }
   ]
 };
+
+// TODO: Naše nová třída pro otázky
+class Question {
+  constructor(difficulty, questionText, answers, rightAnswer){
+    // TODO: propojit argumenty konstruktoru na reálné atributy jako u třídy Quiz
+  }
+}
 
 // Naše hlavní třída pro kvíz
 class Quiz {
@@ -58,15 +65,14 @@ class Quiz {
     }
 }
 
-// TODO: Propojení s HTML
-// hint: question, answer, quizContainter
-
 const questionEl = document.querySelector(".question");
 const answerEls = document.querySelectorAll(".answer");
 const quizContainer = document.querySelector(".quizContainer");
+// TODO: Přidat propojení s obztížnostmi
+const difficultyBtns
 
 
-// TODO: napsat funkci pro vykreslení otázky a kontrolu konce
+// Vykreslení otázky a kontrola konce
 function printQuestion(quiz){
 
   // KONEC KVÍZU
@@ -90,6 +96,7 @@ function printQuestion(quiz){
   });
 }
 
+// Zpracování kliknutí na odpověď
 function handleClick(event, quiz){
   const vybranyIndex = parseInt(event.target.dataset.index);
 
@@ -98,10 +105,22 @@ function handleClick(event, quiz){
   printQuestion(quiz);
 }
 
-// Kód se musí spustit pouze pokud jsme na quiz.html
-if (document.querySelector(".quizContainer")) {
+// Kód pro quiz.html
+// TODO: fix: Vylepšit podmínku abychom zabránili redundanci kódu
+// hint: Zkusme využít to co už máme o pár řádků výše
+if (document.querySelector(".quizContainer")) { // <-- vylepšení podmínky
+
+  // TODO: načtení obtížnosti z localStorage
+  // hint: localStorage.getItem('ItemCoHledame')
+  // Otázka k zamyšlení: Co když uživatel nevybral obtížnost?
+  const difficulty
+
+  // TODO: Vyfiltrovat otázky podle obtížnosti
+  // hint: Využijte vestavěnou metodu .filter(item => podminka)
+  const questionsFiltered
 
   // Vytvoř nový kvíz
+  // TODO: Použij již vyfiltrované otázky
   const quiz = new Quiz(questionsData);
 
   // Posluchače pro každou odpověď
@@ -113,4 +132,16 @@ if (document.querySelector(".quizContainer")) {
 
   // Vykresli první otázku
   printQuestion(quiz);
+}
+
+// Kód pro obtiznost.html
+// TODO: Doplnit logiku
+// hint: Zkusme využít to co už máme o pár řádků výše u té podmínky
+if (/* Jestli jsme na stránce obtiznost.html */) {
+
+  // TODO: přidat posluchače na tlačítka s obtížnostmi a uložit si jejich hodnotu do localStorage
+  // hint: localStorage.setItem('JmenoItemuCoUkladame', item),
+  // použijte .trim() metodu pro event.target.textContent 
+  // přidání posluchačů bude stejné jako u answerEls,
+  // pro přesměrování na další stránku využíte window.location.href = "quiz.html"
 }

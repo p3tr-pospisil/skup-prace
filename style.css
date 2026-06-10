@@ -239,13 +239,12 @@ body{
     border-radius: 33px;
 
     /* Text */
-    font-size: 75px;
+    font-size: 45px;
     font-weight: 900;
 
     /* Velikost */
-    width: 800px;
-    height: 250px;
-    padding: 10px;
+    max-width: 900px;
+    padding: 30px;
     margin-bottom: 100px;
 
     /* Centrování*/
